@@ -1,5 +1,6 @@
 from models.CardValue import *
 from models.Suit import *
+from models.Card import *
 
 OROS = 'OROS'
 COPAS = 'COPAS'
@@ -15,10 +16,13 @@ CardValue('SEIS', 6, 'seis')
 CardValue('SIETE', 7, 'siete')
 CardValue('SOTA', 10, 'sota')
 CardValue('CABALLO', 11, 'caballo')
-lastCard = CardValue('REY', 12, 'rey')
-print(lastCard)
+lastCardValue = CardValue('REY', 12, 'rey')
+print(lastCardValue)
 
-Suit(OROS, 'oros')
+oros = Suit(OROS, 'oros')
 Suit(COPAS, 'copas')
 Suit(ESPADAS, 'espadas')
 Suit(BASTOS, 'bastos')
+
+card = Card(lastCardValue, oros)
+print(card)
